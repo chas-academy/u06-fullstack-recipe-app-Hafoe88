@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+}
+
+article {
+    margin: 20px 10px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+button {
+    border-radius: 5 px;
+    margin: 10px;
+    padding: 2px;
+    color: white;
+    background-color: green;
+}
+

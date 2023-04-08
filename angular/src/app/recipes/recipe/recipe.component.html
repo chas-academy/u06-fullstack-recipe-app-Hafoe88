@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <a routerLink="/" routerLinkActive="active">Back to main</a>
+  <hr />
+
+  <article>
+    <h2>{{ recipe.label }}</h2>
+    <img [src]="recipe.image" [alt]="recipe.label" />
+    <p>Ingredients:</p>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredientLines">
+        {{ ingredient }}
+      </li>
+    </ul>
+  </article>
+</div>
