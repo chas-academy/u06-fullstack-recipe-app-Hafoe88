@@ -16,7 +16,7 @@ export class UserService {
   // password: string = '';
   // password_confirmation: string = '';
 
-  configURL = "http://127.0.0.1:8000/api/";
+  configURL = "https://u06-fullstack-recipe-app-hafoe88-production.up.railway.app/";
 
   httpOptions = {
     headers: new HttpHeaders({
