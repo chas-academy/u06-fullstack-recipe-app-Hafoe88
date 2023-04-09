@@ -1,8 +1,10 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
-	<label for="exampleInputEmail1">Email</label><br>
-    <input type="email" formControlName="email" placeholder="Enter email"><br>
-    <label for="exampleInputPassword1">Password</label><br>
-    <input type="password" formControlName="password" placeholder="Password"><br>
+<div class="box">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+        <label for="exampleInputEmail1">Email</label><br>
+        <input type="email" formControlName="email" placeholder="Enter email"><br>
+        <label for="exampleInputPassword1">Password</label><br>
+        <input type="password" formControlName="password" placeholder="Password"><br>
 
-    <button type="submit">LOG IN</button>
-</form>
+        <button type="submit">LOG IN</button>
+    </form>
+</div>

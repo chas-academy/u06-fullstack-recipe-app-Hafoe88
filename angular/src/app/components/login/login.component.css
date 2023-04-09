@@ -1,0 +1,15 @@
+.box {
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  button {
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 50px;
+}
