@@ -18,6 +18,7 @@ export class RegisterComponent {
 
   register(){
     this.userService.registerUser(this.regForm.value)
+    this.router.navigate(['/']);
   }
  
 }
