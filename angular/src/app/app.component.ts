@@ -24,19 +24,11 @@ export class AppComponent {
   }
 
   constructor(private userService: UserService){
-    //userService.loginUser(this.me)
   }
 
-  login(){
-    this.userService.loginUser(this.me)
-  }
 
   logout(){
     this.userService.logoutUser(this.me)
-  }
-
-  register(){
-    this.userService.registerUser()
   }
 
 }

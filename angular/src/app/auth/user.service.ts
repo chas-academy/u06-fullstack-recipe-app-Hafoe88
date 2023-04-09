@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs';
@@ -12,10 +11,10 @@ import { User } from '../user';
 })
 export class UserService {
 
-  name: string = '';
-  email: string = '';
-  password: string = '';
-  password_confirmation: string = '';
+  // name: string = '';
+  // email: string = '';
+  // password: string = '';
+  // password_confirmation: string = '';
 
   configURL = "http://127.0.0.1:8000/api/";
 
@@ -27,7 +26,7 @@ export class UserService {
   }
 
 
-  constructor(private http: HttpClient, private router:Router) { }
+  constructor(private http: HttpClient) { }
 
 
   loginUser(user: User){
@@ -36,6 +35,7 @@ export class UserService {
     .subscribe(res => {
       console.log(res)
       localStorage.setItem("token", res.token);
+      console.log("test successful")
     })
   }
 
@@ -44,19 +44,12 @@ export class UserService {
     console.log("logged out")
   }
 
-  registerUser() {
-    
-    const data = {
-      email: this.email,
-      password: this.password,
-      name: this.name,
-      password_confirmation: this.password_confirmation,
-    };
-    this.http.post<any>(this.configURL + "register", this.httpOptions)
+  registerUser(user: User) {
+    this.http.post<any>(this.configURL + "register", user, this.httpOptions)
     .pipe(catchError(this.handleError))
     .subscribe(res => {
-      console.log("register success");
-      localStorage.setItem("token", res.token);
+      console.log(res);
+      // localStorage.setItem("token", res.token);
     })
   }
 
